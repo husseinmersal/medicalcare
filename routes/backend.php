@@ -18,11 +18,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('dashboard_admin',[DashboardController::class,'index']);
 
 
-Route::get('/dashboard/patient', function () {
-    return view('Dashboard.patient.dashboard');
-})->middleware(['auth'])->name('dashboard.patient');
 
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ], function(){ 
 
+        Route::get('/dashboard/user', function () {
+            return view('Dashboard.user.dashboard');
+        })->middleware(['auth:web'])->name('dashboard.user');
+        
+        
+        Route::get('/dashboard/admin', function () {
+            return view('Dashboard.admin.dashboard');
+        })->middleware(['auth:admin'])->name('dashboard.admin');
+        
+        
+        require __DIR__.'/auth.php';
+        
+    });
 
-
-require __DIR__.'/auth.php';
