@@ -36,19 +36,29 @@
 								</div>
 								<div class="card-sigin">
 									<div class="main-signup-header">
-										<h2>Welcome back!</h2>
+										<h2>{{trans('Dashboard/login_trans.Welcome')}}</h2>
+										 
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 										<div class="form-group">
-											<label for="exampleFormControlSelect1">حدد نوع المستخدم</label>
+											<label for="exampleFormControlSelect1">{{trans('Dashboard/login_trans.Select_Enter')}} </label>
 											<select class="form-control" id="sectionChooser">
-												<option value="" selected disabled>اختار من القائمه</option>
-												<option value="patient">الدخول كمريض</option>
-												<option value="admin">الدخول كمسؤل</option>
+												<option value="" selected disabled> {{trans('Dashboard/login_trans.Choose_list')}} </option>
+												<option value="patient">{{trans('Dashboard/login_trans.user')}} </option>
+												<option value="admin">{{trans('Dashboard/login_trans.admin')}} </option>
 
 											</select>
 										</div>
 
 										<div class="loginform" id="patient">
-											<h5 class="font-weight-semibold mb-4">الدخول كمريض</h5>
+											<h5 class="font-weight-semibold mb-4">{{trans('Dashboard/login_trans.user')}}</h5>
 											<form method="POST" action="{{ route('login.user') }}">
 												@csrf
 												<div class="form-group">
@@ -84,7 +94,7 @@
 
 
 									<div class="loginform" id="admin">
-										<h5 class="font-weight-semibold mb-4">الدخول كمسؤل</h5>
+										<h5 class="font-weight-semibold mb-4">{{trans('Dashboard/login_trans.admin')}}</h5>
 										<form method="POST" action="{{ route('login.admin') }}">
 											@csrf
 											<div class="form-group">
