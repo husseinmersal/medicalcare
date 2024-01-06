@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->decimal('price', 8, 2);
+            $table->decimal('price','8','2');
             $table->text('description')->nullable();
             $table->boolean('status')->default(1);
             $table->timestamps();

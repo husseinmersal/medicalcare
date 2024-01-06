@@ -8,4 +8,6 @@ return array (
   'edit_Service' => 'Edit Service',
   'name' => 'Name',
   'price' => 'Price',
+  'create_time' => 'Creatiion Date',
+  'processes' => 'Processes'
 );

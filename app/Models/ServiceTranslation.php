@@ -8,9 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ServiceTranslation extends Model
 {
-    use HasFactory, Translatable;
+    use HasFactory;
+    protected $fillable = ['name'];
+    public $timestamps = false;
 
-    public $translatedAttributes = ['name'];
-
-    public $fillable = ['price','description','status'];
 }

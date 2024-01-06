@@ -8,4 +8,7 @@ return array (
   'edit_Service' => 'تعديل خدمة',
   'name' => 'الاسم',
   'price' => 'سعر الخدمة',
+  'create_time' => ' تاريخ الخدمه',
+  'processes' => 'العمليات'
+
 );

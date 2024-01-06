@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('locale')->index();
             $table->string('name');
             $table->unique(['service_id','locale','name']);
-            $table->foreignId('service_id')->references('id')->on('services')->cascadeOnDelete();
+            $table->foreignId('service_id')->references('id')->on('services')->onDelete('cascade');
         });
     }
 
