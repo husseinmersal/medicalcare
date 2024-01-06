@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('locale')->index();
             $table->unique(['section_id', 'locale']);
             $table->foreignId('section_id')->references('id')->on('sections')->onDelete('cascade');
-
+            $table->longText('description');  
             $table->string('name');
         });
     }

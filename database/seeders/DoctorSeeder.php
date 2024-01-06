@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Appointment;
+use App\Models\Doctor;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +14,11 @@ class DoctorSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\Doctor::factory()->count(10)->create();
+       $doctors =  Doctor::factory()->count(10)->create();
+
+       foreach($doctors as $doctor){
+        $Appointments = Appointment::all()->random()->id;
+        $doctor->appointments()->attach($Appointments);
+       }
     }
 }

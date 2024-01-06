@@ -45,6 +45,7 @@
                                             <tr>
                                                 <th class="wd-15p border-bottom-0">#</th>
                                                 <th class="wd-15p border-bottom-0">{{trans('Dashboard/sections_trans.name_sections')}}</th>
+                                                <th class="wd-15p border-bottom-0">{{trans('Dashboard/sections_trans.description_sections')}}</th>
                                                 <th class="wd-20p border-bottom-0">{{trans('Dashboard/sections_trans.created_at')}}</th>
                                                 <th class="wd-20p border-bottom-0">{{trans('Dashboard/sections_trans.Processes')}}</th>
                                             </tr>
@@ -53,7 +54,8 @@
                                            @foreach($sections as $section)
                                                <tr>
                                                    <td>{{$loop->iteration}}</td>
-                                                   <td>{{$section->name}}</td>
+                                                   <td><a href="{{route('doctors.show',$section->id)}}">{{$section->name}}</a></td>
+                                                   <td>{{\Str::limit($section->description,50)}}</td>
                                                    <td>{{ $section->created_at->diffForHumans() }}</td>
                                                    <td>
                                                        <a class="modal-effect btn btn-sm btn-info" data-effect="effect-scale"  data-toggle="modal" href="#edit{{$section->id}}"><i class="las la-pen"></i></a>

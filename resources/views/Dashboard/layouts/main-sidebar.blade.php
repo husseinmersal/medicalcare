@@ -29,12 +29,8 @@
             <li class="slide">
                 <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . $page='#') }}"><svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 5H5v14h14V5zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" opacity=".3"/><path d="M3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2zm2 0h14v14H5V5zm2 5h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg><span class="side-menu__label">{{trans('Dashboard/main-sidebar_trans.sections')}}</span><i class="angle fe fe-chevron-down"></i></a>
                 <ul class="slide-menu">
-                    <li><a class="slide-item" href="{{route('sections.index')}}">Morris Charts</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='chart-flot') }}">Flot Charts</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='chart-chartjs') }}">ChartJS</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='chart-echart') }}">Echart</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='chart-sparkline') }}">Sparkline</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='chart-peity') }}">Chart-peity</a></li>
+                    <li><a class="slide-item" href="{{route('sections.index')}}">{{trans('Dashboard\sections_trans.sections')}}</a></li>
+              
                 </ul>
             </li>
             <li class="slide">
@@ -45,17 +41,13 @@
             </li>
             <li class="side-item side-item-category">WEB APPS</li>
             <li class="slide">
-                <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . $page='#') }}"><svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12c0 4.08 3.06 7.44 7 7.93V4.07C7.05 4.56 4 7.92 4 12z" opacity=".3"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c1.03.13 2 .45 2.87.93H13v-.93zM13 7h5.24c.25.31.48.65.68 1H13V7zm0 3h6.74c.08.33.15.66.19 1H13v-1zm0 9.93V19h2.87c-.87.48-1.84.8-2.87.93zM18.24 17H13v-1h5.92c-.2.35-.43.69-.68 1zm1.5-3H13v-1h6.93c-.04.34-.11.67-.19 1z"/></svg><span class="side-menu__label">Apps</span><i class="angle fe fe-chevron-down"></i></a>
+                <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . $page='#') }}"><svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12c0 4.08 3.06 7.44 7 7.93V4.07C7.05 4.56 4 7.92 4 12z" opacity=".3"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c1.03.13 2 .45 2.87.93H13v-.93zM13 7h5.24c.25.31.48.65.68 1H13V7zm0 3h6.74c.08.33.15.66.19 1H13v-1zm0 9.93V19h2.87c-.87.48-1.84.8-2.87.93zM18.24 17H13v-1h5.92c-.2.35-.43.69-.68 1zm1.5-3H13v-1h6.93c-.04.34-.11.67-.19 1z"/></svg><span class="side-menu__label">{{trans('main-sidebar_trans.Services')}}</span><i class="angle fe fe-chevron-down"></i></a>
                 <ul class="slide-menu">
-                    <li><a class="slide-item" href="{{ url('/' . $page='cards') }}">Cards</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='darggablecards') }}">Darggablecards</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='rangeslider') }}">Range-slider</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='calendar') }}">Calendar</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='contacts') }}">Contacts</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='image-compare') }}">Image-compare</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='notification') }}">Notification</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='widget-notification') }}">Widget-notification</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='treeview') }}">Treeview</a></li>
+                    <li><a class="slide-item" href="{{route('services.index')}}">{{trans('main-sidebar_trans.Single_service')}}</a></li>
+                    <li><a class="slide-item" href="{{ url('/' . $page='darggablecards') }}">{{trans('main-sidebar_trans.group_services')}}</a></li>
+                    <li><a class="slide-item" href="{{ url('/' . $page='contacts') }}">{{trans('main-sidebar_trans.Insurance')}}</a></li>
+                    <li><a class="slide-item" href="{{ url('/' . $page='rangeslider') }}">{{trans('main-sidebar_trans.ambulance')}}</a></li>
+                    <li><a class="slide-item" href="{{ url('/' . $page='calendar') }}">{{trans('main-sidebar_trans.Ambulance_calls')}}</a></li>
                 </ul>
             </li>
             <li class="slide">

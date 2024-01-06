@@ -17,7 +17,6 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('phone');
-            $table->decimal('price',8,2);
             $table->foreignId('section_id')->references('id')->on('sections')->nullable();
             $table->timestamps();
         });
