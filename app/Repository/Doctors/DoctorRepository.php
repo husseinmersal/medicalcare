@@ -56,7 +56,7 @@ class DoctorRepository implements DoctorRepositoryInterface
 
         DB::commit();
         session()->flash('add');
-        return redirect()->route('doctors.create');
+        return redirect()->route('doctors.index');
 
     }
     catch (\Exception $e) {

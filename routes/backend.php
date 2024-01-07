@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\Dashboard\AbmulanceController;
+use App\Http\Controllers\Dashboard\AmbulanceController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\InsuranceController;
+use App\Http\Controllers\Dashboard\PatientController;
 use App\Http\Controllers\Dashboard\SectionController;
 use App\Http\Controllers\Dashboard\DoctorController;
 use App\Http\Controllers\Dashboard\ServiceController;
@@ -61,6 +65,20 @@ Route::group(
         Route::post('update_status',[DoctorController::class,'update_status'])->name('update_status');
 
         Route::resource('services',SingleServiceController::class);
+
+                // ########### Routes livewire for add_group_services  ############
+
+
+        Route::view('add_group_services','livewire.GroupServices.include_create')->name('add_group_services');
+
+
+
+        Route::resource('insurance', InsuranceController::class);
+
+        Route::resource('ambulances', AmbulanceController::class);
+
+        Route::resource('patients', PatientController::class);
+
 
      });
 

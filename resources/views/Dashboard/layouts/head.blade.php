@@ -2,6 +2,8 @@
 <title>@yield('title')</title>
 
 @yield('css')
+@livewireStyles
+
 <!--- Style css -->
 @if(App::getlocale() == 'ar')
 <!-- Favicon -->
