@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('service_group', function (Blueprint $table) {
+        Schema::create('fund_accounts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('service_id')->references('id')->on('services')->cascadeOnDelete();
-            $table->foreignId('group_id')->references('id')->on('groups')->cascadeOnDelete();
+            $table->date('date');
+            $table->decimal('debit',8,2)->nullable();
+            $table->decimal('credit',8,2)->nullable();
+            $table->foreignId('single_invoice_id')->references('id')->on('single_invoices')->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('service_group');
+        Schema::dropIfExists('fund_accounts');
     }
 };

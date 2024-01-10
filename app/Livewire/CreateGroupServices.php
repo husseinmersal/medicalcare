@@ -7,10 +7,8 @@ use App\Models\Group;
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
 
-class CreateGroupServices extends Component
-{
-    
-    public $GroupsItems = [];
+class CreateGroupServices  extends Component
+{ public $GroupsItems = [];
     public $allServices = [];
     public $discount_value = 0;
     public $taxes = 17;

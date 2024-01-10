@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->decimal('total_before',8,2);
+            $table->decimal('Total_before_discount',8,2);
             $table->decimal('discount_value',8,2);
-            $table->decimal('total_after',8,2);
+            $table->decimal('Total_after_discount',8,2);
             $table->string('tax_rate');
-            $table->decimal('total_with_tax',8,2);
+            $table->decimal('Total_with_tax',8,2);
             $table->timestamps(); 
         });
     }
